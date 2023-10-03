@@ -8,26 +8,44 @@
 </head>
 <body>
     <header>
-        <h1>This is an overview on Occupany Grid Mapping.
+        <h1>Occupany Grid Mapping
             <span style="font-size: 12px; color: gray;">Sarin Ann Mathew</span>
             <span style="font-size: 12px; color: gray;">UMD College Park</span>
-            <span style="font-size: 12px; color: gray;">October 2nd, 2023</span>
+            <span style="font-size: 12px; color: gray;">October 3rd, 2023</span>
         </h1>
     </header>
 
     <main>
         <section>
             <h2>Summary</h2>
-            <p>This is a sample webpage.</p>
-        </section>
+            <p>Occupancy Grid Mapping is used in probabilistic robotics to address the 
+                problem of creating maps from noisy and uncertain sensor measurement data.
+                This involves assuming that the pose of the robot is known. It was first introduced 
+                by H. Moravec and A. Elfes in 1985. As explained by Alberto Elfes in his paper, "The Occupancy Grid
+                is a multi-dimensional randomfield model that maintains probabilistic estimates of the occupancy state of each cell in
+                a spatia/lattice". 
 
-        <section>
-            <h2>Overview</h2>
+            </p>
         </section>
 
         <section>
             <h2>Occupancy grid mapping in today's robotics</h2>
-            <p>Sample Text.</p>
+            <p>Occupancy Grid Maps play a crucial role in enabling robots to understand
+                and navigate within their surroundings.</p>
+            <ul>
+                <li> Robots use occupancy grid maps to represent the environment in a 
+                    grid-based format. The environment is discretized into small cells, 
+                    and each cell stores information about whether it's occupied by an 
+                    obstacle, free space, or unknown. </li>
+                <li> Occupancy Grid Mapping algorithms integrate data from sensors attached 
+                    onto the robts into the grid cells, updating their occupancy 
+                    probabilities based on sensor measurements.</li>
+                <li> SLAM is a critical problem in robotics, where a robot must create 
+                    a map of an unknown environment while simultaneously localizing itself 
+                    within that environment. The robot updates the grid map as it moves 
+                    through the environment and simultaneously refines its 
+                    estimate of its own position</li>
+            </ul>
         </section>
 
         <section>
@@ -41,28 +59,24 @@
         </section>
 
         <section>
-            <h2>Literature Review</h2>
-            <p>Sample Text.</p>
-        </section>
-
-        <section>
             <h2>Notable Variants</h2>
             <p>Sample Text.</p>
         </section>
 
         <section>
-            <h2>Applications</h2>
-            <p>Sample Text.</p>
-        </section>
-
-        <section>
-            <h2>Open Research</h2>
+            <h2>Open Research Topics</h2>
             <p>Sample Text.</p>
         </section>
 
         <section>
             <h2>References</h2>
-            <p>Sample Text.</p>
+            <p>The following papers and lecture notes were taken as reference to write this document.</p>
+            <ol>
+                <li> Van Kempen, Raphael, et al. "A simulation-based end-to-end learning framework for evidential occupancy grid mapping." 2021 IEEE Intelligent Vehicles Symposium (IV). IEEE, 2021. </li>
+                <li> Nuss, Dominik, et al. "A random finite set approach for dynamic occupancy grid maps with real-time application." The International Journal of Robotics Research 37.8 (2018): 841-866.</li>
+                <li> H. Moravec and A. Elfes, "High resolution maps from wide angle sonar," Proceedings. 1985 IEEE International Conference on Robotics and Automation, St. Louis, MO, USA, 1985, pp. 116-121, doi: 10.1109/ROBOT.1985.1087316.</li>
+                <li> Elfes, Alberto. "Occupancy grids: A stochastic spatial representation for active robot perception." arXiv preprint arXiv:1304.1098 (2013).</li>
+            </ol>
         </section>
         
     </main>
