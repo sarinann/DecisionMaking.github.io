@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Occupancy Grid Mapping</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file, if any -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your external CSS file, if any -->
 </head>
 <body>
     <header>
@@ -59,7 +59,19 @@
 
         <section>
             <h2>Algorithms</h2>
-            <p>Sample Text.</p>
+                <pre class="language-python">
+                    <code>
+                        1: Algorithm occupancy grid mapping({lt−1,i}, xt, zt):
+                        2: for all cells mi do
+                        3: if mi in perceptual field of zt then
+                        4: lt,i = lt−1,i + inverse sensor model(mi, xt, zt) − l0
+                        5: else
+                        6: lt,i = lt−1,i
+                        7: endif
+                        8: endfor
+                        9: return {lt,i}
+                    </code>
+                </pre>
         </section>
 
         <section>
