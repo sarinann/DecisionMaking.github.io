@@ -32,7 +32,7 @@ li {
 /* Style code blocks */
 pre {
     background-color: #F0F0F0; /* Light gray for code blocks */
-    padding: 5px;
+    padding: 5px 30px 10px 10px;
     border: 1px solid #999;
     overflow-x: auto;
     font-family: 'Courier New', monospace; /* Use a monospaced font for code blocks */
