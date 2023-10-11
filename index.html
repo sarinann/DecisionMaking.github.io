@@ -61,15 +61,28 @@
             <h2>Algorithms</h2>
                 <pre class="language-python">
                     <code>
-                        1: Algorithm occupancy grid mapping({lt−1,i}, xt, zt):
-                        2: for all cells mi do
-                        3: if mi in perceptual field of zt then
-                        4: lt,i = lt−1,i + inverse sensor model(mi, xt, zt) − l0
-                        5: else
-                        6: lt,i = lt−1,i
-                        7: endif
-                        8: endfor
-                        9: return {lt,i}
+                        Algorithm: Occupancy Grid Mapping({l<sub>t−1,i</sub>}, x<sub>t</sub>, z<sub>t</sub>)
+                        Input:
+                        - {l<sub>t−1,i</sub>}: Previous occupancy grid map
+                        - x<sub>t</sub>: Robot's current pose
+                        - z<sub>t</sub>: Sensor measurements
+
+                        Output:
+                        - Updated occupancy grid map {l<sub>t,i</sub>}
+
+                        1. Initialize an empty occupancy grid map: {l<sub>t,i</sub>} 
+
+                        2. For each cell mi in the grid map:
+                        a. If m<sub>i</sub>> is in the perceptual field of z<sub>t</sub>, then
+                            i. Calculate l<sub>t,i</sub> using the inverse sensor model as follows:
+                            l<sub>t,i</sub> = l<sub>t-1,i</sub> + inverse_sensor_model(m<sub>i</sub>, x<sub>t</sub>, z<sub>t</sub>) - l<sub>0</sub> 
+                            ii. Otherwise, if m<sub>i</sub> is not in the perceptual field, then
+                            l<sub>t,i</sub> = l<sub>t-1,i</sub>
+
+                        3. End for loop
+
+                        4. Return the updated occupancy grid map {l<sub>t,i</sub>}
+
                     </code>
                 </pre>
         </section>

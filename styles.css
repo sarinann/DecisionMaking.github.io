@@ -21,16 +21,18 @@ p {
 
 ul {
     list-style-type: disc; /* Bulleted list style */
+    color: #666; /* Text color for list content */
 }
 
 li {
     font-size: 16px;
+    color: #666; /* Text color for list content */
 }
 
 /* Style code blocks */
 pre {
     background-color: #F0F0F0; /* Light gray for code blocks */
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #999;
     overflow-x: auto;
     font-family: 'Courier New', monospace; /* Use a monospaced font for code blocks */
