@@ -23,12 +23,10 @@
                 This involves the assumption that the pose of the robot is known. It was first introduced 
                 by H. Moravec and A. Elfes in 1985. As explained by Alberto Elfes in his paper, "The Occupancy Grid
                 is a multi-dimensional randomfield model that maintains probabilistic estimates of the occupancy state of each cell in
-                a spatia/lattice". Occupancy grid maps are a type of representation used primarily for mapping and representing the 
+                a spatia/lattice". <br> Occupancy grid maps are a type of representation used primarily for mapping and representing the 
                 static environment of a robot or an autonomous system. These maps provide information about whether individual cells in a 
-                grid are occupied or unoccupied. <br>
-
-
-
+                grid are occupied or unoccupied. Information about the environment can be collected from sensors like Lidar, Ultrasonic and sonar sensors, cameras, depth and RGB-D cameras and bump sensors. 
+                The data from the sensors can be loaded in ral-time or fed in advance.
             </p>
         </section>
 
@@ -86,9 +84,7 @@
                         4. Return the updated occupancy grid map {l<sub>t,i</sub>}
 
                     </code>
-                </pre>
-
-                <pre class="language-python">
+                             
                     <code> Algorithm: Inverse Range Sensor Model(i, x<sub>t</sub>, z<sub>t</sub>)
 
                         Input:
@@ -131,6 +127,16 @@
         <section>
             <h2>Open Research Topics</h2>
             <p>Sample Text.</p>
+        </section>
+
+        <section>
+            <h2>Limitations of Occupancy Mapping</h2>
+            <p>Since mapping using occupancy grids maps rely on dividing the area into a grid of cells, the level of discretization can heavily influence 
+                the map's accuracy and computational resources. Fine-grained grids require more memory, while coarse grids might not capture intricate details in the environment. <br>
+                Occupancy grid maps involve an inherent assumption that environment is static which makes it difficult to handle dynamic objects or situations, such as moving obstacles 
+                and traffic. 
+                
+            </p>
         </section>
 
         <section>
