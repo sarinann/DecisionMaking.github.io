@@ -11,7 +11,6 @@
         <h1>Occupany Grid Mapping
             <span style="font-size: 12px; color: gray;">Sarin Ann Mathew</span>
             <span style="font-size: 12px; color: gray;">UMD College Park</span>
-            <span style="font-size: 12px; color: gray;">October 3rd, 2023</span>
         </h1>
     </header>
 
@@ -134,7 +133,13 @@
             <p>Since mapping using occupancy grids maps rely on dividing the area into a grid of cells, the level of discretization can heavily influence 
                 the map's accuracy and computational resources. Fine-grained grids require more memory, while coarse grids might not capture intricate details in the environment. <br>
                 Occupancy grid maps involve an inherent assumption that environment is static which makes it difficult to handle dynamic objects or situations, such as moving obstacles 
-                and traffic. 
+                and traffic. <br> Classical occupancy grids also have trouble dealing with semi-transparent obstacles such as glass and vegetation. 
+                These obstacles may return hits to the laser rangfinnder about half of the time, but eventually the occupancy grid will converge to either filled 
+                or not filled, both of which are incorrect. <br>
+                Occupancy grids created through sensors like ultrasonic sensosr often face an issue of speculiarity. This occurs when the sensory beam hits a smooth surface and 
+                is reflected off that surface at an obtuse angle. This results in either no or an erroneous reading 
+                being returned to the emitter unit. This creates uncertainty in the mapping process which is further influenced by the existence 
+                of potentially redundant information. When the robot is in the same pose for a long period of time, the  sensors report multiple readings. 
                 
             </p>
         </section>
@@ -147,6 +152,7 @@
                 <li> Nuss, Dominik, et al. "A random finite set approach for dynamic occupancy grid maps with real-time application." The International Journal of Robotics Research 37.8 (2018): 841-866.</li>
                 <li> H. Moravec and A. Elfes, "High resolution maps from wide angle sonar," Proceedings. 1985 IEEE International Conference on Robotics and Automation, St. Louis, MO, USA, 1985, pp. 116-121, doi: 10.1109/ROBOT.1985.1087316.</li>
                 <li> Elfes, Alberto. "Occupancy grids: A stochastic spatial representation for active robot perception." arXiv preprint arXiv:1304.1098 (2013).</li>
+                <li>T. Collins, J. J. Collins and D. Ryan, "Occupancy grid mapping: An empirical evaluation," 2007 Mediterranean Conference on Control & Automation, Athens, Greece, 2007, pp. 1-6, doi: 10.1109/MED.2007.4433772.</li>
             </ol>
         </section>
         
@@ -154,6 +160,8 @@
 
     <footer>
         <p>&copy; 2023 Your Website Name</p>
+        <p><span style="font-size: 12px; color: gray;">Sarin Ann Mathew</span></p>
+        <p><span style="font-size: 12px; color: gray;">UMD College Park</span></p>
     </footer>
 
     <script src="script.js"></script> <!-- Link to your external JavaScript file, if any -->
