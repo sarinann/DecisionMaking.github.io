@@ -22,10 +22,10 @@
                 This involves the assumption that the pose of the robot is known. It was first introduced 
                 by H. Moravec and A. Elfes in 1985. As explained by Alberto Elfes in his paper, "The Occupancy Grid
                 is a multi-dimensional randomfield model that maintains probabilistic estimates of the occupancy state of each cell in
-                a spatia/lattice". <br> Occupancy grid maps are a type of representation used primarily for mapping and representing the 
+                a spatial lattice". <br> Occupancy grid maps are a type of representation used primarily for mapping and representing the 
                 static environment of a robot or an autonomous system. These maps provide information about whether individual cells in a 
                 grid are occupied or unoccupied. Information about the environment can be collected from sensors like Lidar, Ultrasonic and sonar sensors, cameras, depth and RGB-D cameras and bump sensors. 
-                The data from the sensors can be loaded in ral-time or fed in advance.
+                The data from the sensors can be loaded in real-time or fed in advance.
             </p>
         </section>
 
@@ -95,40 +95,38 @@
                            - z<sub>t</sub>: Sensor measurements
                         
                         Output:
-                           - Occupancy likelihood l (l<sub>0</sub>>, l<sub>occ</sub>>, or l<sub>free</sub>>)
+                           - Occupancy likelihood l (l<sub>0</sub>, l<sub>occ</sub>, or l<sub>free</sub>)
                         
-                        1. Let (x<sub>i</sub>>, y<sub>i</sub>>) be the center-of-mass of cell i.
+                        1. Let (x<sub>i</sub>, y<sub>i</sub>) be the center-of-mass of cell i.
                         
                         2. Calculate the range r as:
-                           r = sqrt((x<sub>i</sub>> - x)^<sup>2</sup> + (y<sub>i</sub> - y)^<sup>2</sup>>)
+                           r = sqrt((x<sub>i</sub> - x)^<sup>2</sup> + (y<sub>i</sub> - y)^<sup>2</sup>)
                         
                         3. Calculate the relative angle φ as:
-                           φ = atan2(y<sub>i</sub>> - y, x<sub>i</sub>> - x) - θ
+                           φ = atan2(y<sub>i</sub> - y, x<sub>i</sub> - x) - θ
                         
                         4. Find the index k that minimizes the difference between φ and θj,sens as:
-                           k = argmin<sub>j</sub>> |φ - θ<sub>j,sens</sub>>|
+                           k = argmin<sub>j</sub>> |φ - θ<sub>j,sens</sub>|
                         
-                        5. If r > min(z<sub>max</sub>>, z<sub>k_t</sub>> + α/2) or |φ - θ<sub>k,sens</sub>>| > β/2 then
-                           6. Return l<sub>0</sub>>
+                        5. If r > min(z<sub>max</sub>, z<sub>k_t</sub> + α/2) or |φ - θ<sub>k,sens</sub>| > β/2 then
+                           6. Return l<sub>0</sub>
                         
-                        7. If z<sub>k_t</sub>> < z<sub>max</sub>> and |r - z<sub>max</sub>>| < α/2
-                           8. Return l<sub>occ></code>
+                        7. If z<sub>k_t</sub>> < z<sub>max</sub> and |r - z<sub>max</sub>| < α/2
+                           8. Return l<sub>occ</code>
 
-                        9. If r ≤ z<sub>k_t</sub>>
-                            10. Return l<sub>free</sub>>
+                        9. If r ≤ z<sub>k_t</sub>
+                            10. Return l<sub>free</sub>
                          
                          11. End if
                 </pre>
         </section>
 
         <section>
-            <h2>Notable Variants</h2>
-            <p>Sample Text.</p>
-        </section>
-
-        <section>
             <h2>Open Research Topics</h2>
-            <p>Sample Text.</p>
+            <p>Occupancy grid mapping is a fundamental technique in robotics and computer vision used to represent and update a map of an environment based on sensor 
+                observations. Research in this field continues to evolve especially to extend the capability of the mapping algorithms to handle dynamic environments and real-time updation with online mapping and learning. 
+                Creating an occupancy grid map of an unknown environments using a swarm of robots with limited sensing and networkig capabilities is another domain not researched and developed thoroughly. 
+                Understanding how humans and robots can interact in environments through occupancy grid mapping is an also emerging area. This includes detecting and predicting human behavior, intentions, and improving robot behavior in shared spaces.</p>
         </section>
 
         <section>
@@ -162,7 +160,6 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Your Website Name</p>
         <p><span style="font-size: 12px; color: gray;">Sarin Ann Mathew</span></p>
         <p><span style="font-size: 12px; color: gray;">UMD College Park</span></p>
     </footer>
